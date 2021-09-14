@@ -1,0 +1,18 @@
+<style>
+    .image-div{
+        height: 50px;
+        width: 50px;
+    }
+</style>
+<div mat-dialog-content>
+    <div>
+      <h3>Please collect your can & {{dialogData.type}}: <b>${{dialogData.retrunMoney}}</b></h3>
+    </div>
+    <div>
+        <img class="image-div" src="../../assets/images/{{dialogData.productName}}.jpg"
+            alt="{{ dialogData.productName }}">
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button class="dialog-ok-btn" mat-fab color="primary" cdkFocusInitial (click)="onNoClick()">Ok</button>
+</div>

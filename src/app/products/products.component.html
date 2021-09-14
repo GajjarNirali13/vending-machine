@@ -1,0 +1,32 @@
+<div class="product-main-div"> 
+
+  <div class="header-div">
+    <div class="header-div-1"> 
+      <h2 mat-dialog-title>Vending Machine</h2>
+    </div>
+    <div class="header-div-2"> 
+      <span>Cash: {{displayData.totalCashAmt | number : '1.2-2'}}</span> <br>
+      <span>Card: {{displayData.totalCreditAmt | number : '1.2-2'}}</span> <br>
+      <span>Sold Items: {{displayData.totalSendItem}}</span>
+    </div>
+  </div>
+  
+  <mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let product of products; let i = index">
+      <mat-card class="example-card">
+        <span matBadge="{{ product.quantity <=0 ? '0': product.quantity }}" matBadgeOverlap="false">
+          <img [ngClass]="{'image-disabled' : product.quantity <= 0}" src="../../assets/images/{{product.name}}.jpg" alt="{{ product.name }}">
+        </span>
+        
+        <mat-card-actions>
+            <span class="span-left">
+              {{product.id}}
+            </span>
+            <span class="span-right">
+              ${{product.price}}
+            </span>        
+        </mat-card-actions>
+      </mat-card>    
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

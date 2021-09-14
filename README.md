@@ -1,3 +1,6 @@
+# VendingMachine Assumption
+1. User will select either card or cash not both at same time
+
 # VendingMachine
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.

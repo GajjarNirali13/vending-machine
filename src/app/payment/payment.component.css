@@ -1,0 +1,28 @@
+button {
+  margin: 5px;
+}
+.app-container{
+  position:relative;
+  width: 100% !important;
+  
+}
+.div-1{
+  width: 30% !important;
+  margin:5px auto;
+  padding-bottom: 10px;
+}
+.div-1 button {
+  width:100%;
+}
+.div-2{
+  width: 30% !important;
+  margin:5px auto;
+}
+.cash-div{
+  width: 100%; 
+  overflow: hidden;
+}
+.cash-form{
+  margin-right: 5px; 
+  float: left;
+}

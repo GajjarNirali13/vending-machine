@@ -1,0 +1,58 @@
+.app-container{
+  position:relative;
+  width: 100% !important;
+  height:500px;
+}
+.div-1{
+  margin:5px auto;
+}
+.div-2{
+  width: 30% !important;
+  margin:5px auto;
+}
+.div-3{
+  display: flex;
+  justify-content: center;
+}
+.loader-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.8;
+    z-index: 99;
+}
+.product-main {
+  width: 100% !important;
+}
+.product-selection-main {
+  width: 30% !important;
+}
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #673ab7;
+  color: white;
+  font-weight: 600;
+}
+.toolbar img {
+  margin: 0 16px;
+}
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
+.content {
+  /* margin: 85px auto 32px; */
+  padding: 0 16px;
+  flex-direction: column;
+  align-items: center;
+}
