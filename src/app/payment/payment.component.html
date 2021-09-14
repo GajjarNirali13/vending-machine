@@ -1,26 +1,19 @@
-<div class="app-container">
-    <div class="div-1">
-        <button mat-raised-button color="primary" (click)="madePayment('card')">Card</button>
-    </div>
-
-    <div class="div-2">
-        <h4><b>Please Enter Cash (Note/Coin):</b></h4>
-        <div>
-          <div class="cash-div">
-            <form class="example-form" [formGroup]="cashForm">
-              <div class="cash-form"> 
-                <mat-form-field class="example-full-width" appearance="fill">
-                  <mat-label>Insert Cash</mat-label>
-                  <input matInput formControlName="cash" name="cash" (blur)="madePayment('cash')">
-                </mat-form-field>
-                <div *ngIf="!cashForm.controls['cash'].valid && cashForm.controls['cash'].touched">
-                  <div *ngIf="cashForm.controls['cash'].errors.pattern" style="background-color: red">
-                    Only Numbers are allowed
-                  </div>
-                </div>
-              </div>
-            </form>
+<div>
+  <button mat-raised-button color="primary" (click)="madePayment('card')">Card</button>
+  <h4><b>Please Enter Cash (Note/Coin):</b></h4>
+  <div>
+      <form class="example-form" [formGroup]="cashForm">
+        <div class="cash-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Insert Cash</mat-label>
+            <input matInput formControlName="cash" name="cash" (blur)="madePayment('cash')">
+          </mat-form-field>
+          <div *ngIf="!cashForm.controls['cash'].valid && cashForm.controls['cash'].touched">
+            <div *ngIf="cashForm.controls['cash'].errors.pattern" style="background-color: red">
+              Only Numbers are allowed
+            </div>
           </div>
         </div>
-    </div>
+      </form>
+  </div>
 </div>
